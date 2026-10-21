@@ -228,6 +228,79 @@ td select{border:1.5px solid var(--line);border-radius:9px;padding:5px 6px;backg
 .linkbtn.armed{color:var(--crit)}
 .orc-catcfg{display:grid;gap:12px;border-top:1px dashed var(--line);padding-top:12px}
 @media (max-width:380px){.orc-cfg,.orc-scen{grid-template-columns:1fr}.orc-big{font-size:30px}}
+
+/* Checklist de pré-inauguração */
+.q input[type=date],.q input[type=search],.q select{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:11px 12px;background:#FFFCFB;min-width:0;font:inherit;color:var(--ink)}
+.q input[type=date]:focus,.q select:focus{border-color:var(--red);outline:none;background:#fff}
+.ck-home-h{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.ck-red{color:var(--crit)}
+.ck-grid{display:grid;gap:12px}
+.ck-side,.ck-main{min-width:0}
+.ck-big{display:flex;align-items:baseline;gap:8px}
+.ck-big .num{font-family:var(--display);font-weight:800;font-size:38px;line-height:1;color:var(--red)}
+.ck-big small{color:var(--muted);font-weight:700}
+.ck-tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ck-tile{border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:8px 10px;display:grid;text-align:left}
+.ck-tile b{font-size:22px;font-family:var(--display);line-height:1.1}
+.ck-tile span{font-size:12.5px;color:var(--muted);font-weight:700}
+.ck-tile.ok b{color:var(--green)}
+.ck-tile.bad{background:var(--red-soft);border-color:#F2C2C3}
+.ck-tile.bad b{color:var(--crit)}
+.ck-readylink{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:800;font-size:15px;text-align:left;cursor:pointer;width:100%}
+.ck-date{font-weight:800;font-size:18px}
+.ck-tools{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.ck-tools input{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:11px 12px;background:var(--card);min-width:0}
+.ck-tools input:focus{border-color:var(--red);outline:none}
+.ck-nf{background:var(--red);color:#fff;border-radius:999px;padding:0 7px;font-size:12px;margin-left:4px}
+.ck-filters{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ck-fres{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:14px}
+.ck-etapa{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.ck-etapa summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto 14px;gap:10px;align-items:center;padding:12px 14px}
+.ck-etapa summary::-webkit-details-marker{display:none}
+.ck-etapa summary::after{content:"";width:8px;height:8px;border-right:2.4px solid var(--red);border-bottom:2.4px solid var(--red);transform:rotate(45deg);justify-self:center;margin-top:-4px;transition:transform .2s}
+.ck-etapa[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+.ck-etapa[open] summary{border-bottom:1px solid var(--line)}
+.ck-etapa summary .mid{min-width:0;display:grid;gap:2px}
+.ck-etapa summary b{font-size:15px;overflow-wrap:anywhere}
+.ck-etapa summary small{color:var(--muted);font-size:12.5px}
+.ck-mini{height:6px;margin-top:4px}
+.ck-pct{font-weight:800;font-size:15px}
+.ck-body{display:grid;gap:8px;padding:12px 14px 14px}
+.ck-task{display:grid;grid-template-columns:40px minmax(0,1fr);gap:6px;align-items:start;border:1px solid var(--line);border-radius:14px;background:#FFFCFB;padding:8px}
+.ck-task.late{border-color:#EFA2A4;background:#FFF4F4}
+.ck-task.st-bloqueada{border-left:4px solid var(--crit)}
+.ck-check{width:36px;height:36px;border-radius:50%;border:2px solid #D9CCCA;background:#fff;display:grid;place-items:center;color:transparent;padding:0}
+.ck-check svg{width:18px;height:18px}
+.ck-check[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+.ck-tmain{border:0;background:none;text-align:left;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:start;padding:4px 2px;min-width:0}
+.ck-tmain .mid{display:grid;gap:2px;min-width:0}
+.ck-tmain b{font-size:14.5px;line-height:1.3;overflow-wrap:anywhere}
+.st-concluida .ck-tmain b{text-decoration:line-through;color:var(--muted)}
+.ck-tmain small{font-size:12.5px;color:var(--muted)}
+.ck-tmain small.ck-why{color:var(--crit);font-weight:700}
+.ck-tmain small.ck-dep{color:var(--amber);font-weight:700}
+.ck-prio{font-size:11px;font-weight:800;border-radius:6px;padding:2px 7px;white-space:nowrap}
+.pr-alta{background:var(--red-soft);color:var(--crit)}
+.pr-media{background:var(--orange-soft);color:var(--amber)}
+.pr-baixa{background:var(--bg);color:var(--muted)}
+.ck-ecfg{display:grid;gap:10px;border-top:1px dashed var(--line);padding-top:12px;margin-top:4px}
+.ck-erow{display:flex;gap:8px;flex-wrap:wrap}
+.ck-erow .btn{flex:1 1 140px}
+.ck-rule{margin:0;font-size:13.5px;background:var(--bg);border-radius:10px;padding:8px 10px}
+.ck-critlist .ck-task{background:var(--card)}
+.ck-aval{border-radius:12px;padding:10px 12px;display:grid;gap:2px}
+.ck-aval.go{background:var(--green-soft)}
+.ck-aval.no{background:var(--red-soft)}
+.ck-aval small{color:var(--muted)}
+.ck-aval p{margin:4px 0 0}
+.ck-deps{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#FFFCFB;display:grid;gap:6px}
+.ck-deps summary{cursor:pointer;font-weight:700}
+.ck-depg{border:0;margin:8px 0 0;padding:0;display:grid;gap:6px}
+.ck-depg legend{font-size:11.5px;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px;padding:0}
+.ck-depi{display:flex;gap:8px;align-items:flex-start;font-size:14px}
+.ck-depi input{width:18px;height:18px;margin-top:2px;flex:none;accent-color:var(--red)}
+@media (max-width:420px){.ck-filters{grid-template-columns:1fr}}
+@media (min-width:900px){.wrap.wide{max-width:1000px}.ck-grid{grid-template-columns:310px minmax(0,1fr);align-items:start}.ck-side{position:sticky;top:calc(140px + env(safe-area-inset-top,0px))}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
 .linkbtn{border:0;background:none;padding:4px 0;color:var(--red);font-weight:800;text-decoration:underline;text-underline-offset:3px}
@@ -458,9 +531,10 @@ function autorTxt(f){if(S.user&&f.autorUid===S.user.uid)return "Você · ";retur
 const BACK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>';
 function chrome(){
   const logged=!!(S.ready&&S.user&&S.nome);
-  document.getElementById("nav").hidden=!logged||S.view==="form";
+  document.getElementById("nav").hidden=!logged||S.view==="form"||S.view==="tarefa";
+  app.classList.toggle("wide",S.view==="checklist");
   document.querySelector(".seg").hidden=!logged;
-  document.querySelectorAll("#nav button").forEach(b=>{const v=b.dataset.view;const cur=(v===S.view)||(v==="new"&&S.view==="form")||(v==="list"&&S.view==="detail");if(cur)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});
+  document.querySelectorAll("#nav button").forEach(b=>{const v=b.dataset.view;const cur=(v===S.view)||(v==="new"&&S.view==="form")||(v==="list"&&S.view==="detail")||(v==="home"&&(S.view==="checklist"||S.view==="tarefa"));if(cur)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});
   document.querySelectorAll(".seg button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.city===S.city)))}
 function render(){
   if(!configOk||S.noSdk){S.view="setup"}
@@ -469,7 +543,7 @@ function render(){
   else if(!S.nome){S.view="nome"}
   else if(["setup","loading","login","nome"].includes(S.view)){S.view="home"}
   chrome();
-  ({setup:renderSetup,loading:renderLoading,login:renderLogin,nome:renderNome,home:renderHome,new:renderNew,form:renderForm,list:renderList,detail:renderDetail,placar:renderPlacar,orcamento:renderOrcamento})[S.view]();
+  ({setup:renderSetup,loading:renderLoading,login:renderLogin,nome:renderNome,home:renderHome,new:renderNew,form:renderForm,list:renderList,detail:renderDetail,placar:renderPlacar,orcamento:renderOrcamento,checklist:renderChecklist,tarefa:renderTarefa})[S.view]();
 }
 function renderLoading(){app.innerHTML='<div class="empty"><img src="'+MASCOTE+'" alt=""><div>Carregando…</div></div>'}
 function renderSetup(){
@@ -499,6 +573,7 @@ function renderHome(){
   app.innerHTML='<div class="stack">'+statusBanner()+
    '<section class="hero"><div class="txt"><div class="eyebrow">'+esc(CITIES[c])+'</div><div class="say">Bora conhecer a cidade, '+esc(S.nome.split(" ")[0])+'!</div><p>'+(total?('<b class="num">'+total+'</b> ficha'+(total>1?"s":"")+' coletada'+(total>1?"s":"")+' aqui. As metas abaixo são por cidade.'):'Nenhuma ficha ainda nesta cidade. Comece pela observação da cidade e siga para os estabelecimentos.')+'</p></div><img src="'+MASCOTE+'" alt="Raposa entregadora do Mais Delivery"></section>'+
    '<section class="card stack"><h3>Metas da visita</h3><div class="goals">'+goals+'</div></section>'+
+   ckHomeCard(c)+
    '<section class="stack"><h3>Nova ficha</h3>'+newGrid()+'</section>'+
    '<p class="who">Conectado como <b>'+esc(S.nome)+'</b>'+(S.admin?' · administrador':'')+' · <button class="linkbtn" id="sair">Sair</button></p></div>';
 }
@@ -779,6 +854,377 @@ function orcOnInput(el){
   else o[f]=el.value;
   orcRefreshCat(c,it);orcSave(c,it.id)}
 
+/* ---------- Checklist de pré-inauguração ---------- */
+/* Por cidade: checklists/{cidade} (data de inauguração e avaliação final),
+   checklists/{cidade}/etapas/{id} e checklists/{cidade}/tarefas/{id}.
+   Regra de prontidão: tarefas de prioridade Alta são críticas; a cidade só pode ser
+   marcada como pronta quando todas as críticas estiverem Concluídas. */
+const CK_ST=[["pendente","Pendente"],["andamento","Em andamento"],["bloqueada","Bloqueada"],["concluida","Concluída"]];
+const CK_PR=[["alta","Alta"],["media","Média"],["baixa","Baixa"]];
+const CK_STL=Object.fromEntries(CK_ST),CK_PRL=Object.fromEntries(CK_PR);
+// [etapa, [[tarefa, prioridade, dias antes da inauguração (null = sem prazo), descrição]]]
+const CK_TPL=[
+ ["Planejamento da cidade",[
+  ["Definir a data prevista de inauguração","alta",null,"Registre a data no topo do checklist. Os prazos relativos são calculados a partir dela."],
+  ["Mapear bairros e regiões que serão atendidos","media",60,""],
+  ["Definir a área inicial de cobertura","alta",55,""],
+  ["Analisar demanda, concorrência e perfil dos consumidores","media",55,"Use as fichas e o placar da pesquisa de campo."],
+  ["Definir metas e critérios para considerar a cidade pronta","media",50,""],
+  ["Identificar riscos e ações de contingência","media",45,""]]],
+ ["Estrutura local e operação",[
+  ["Avaliar a necessidade de ponto comercial ou base operacional","media",50,""],
+  ["Confirmar endereço, estrutura, acesso e necessidades do local","media",40,""],
+  ["Definir horários e canais de atendimento","alta",30,""],
+  ["Documentar os processos de operação e suporte","media",21,""],
+  ["Definir responsáveis e contatos locais","alta",30,""]]],
+ ["Estabelecimentos parceiros",[
+  ["Mapear e priorizar estabelecimentos para prospecção","media",45,""],
+  ["Registrar contatos, negociações e próximos passos","media",30,"Anote nas observações quem foi contatado, o combinado e o próximo passo."],
+  ["Cadastrar os parceiros no aplicativo","alta",21,""],
+  ["Conferir cardápios, categorias, preços, descrições, fotos e disponibilidade","alta",14,""],
+  ["Validar como os estabelecimentos receberão e confirmarão pedidos","alta",10,""],
+  ["Verificar se há quantidade e variedade suficientes de parceiros para o lançamento","alta",10,""]]],
+ ["Entregadores e logística",[
+  ["Estimar a quantidade necessária de entregadores","media",40,""],
+  ["Recrutar e cadastrar entregadores","alta",21,""],
+  ["Confirmar disponibilidade, regiões e horários de atuação","media",14,""],
+  ["Planejar áreas de atendimento, turnos e distribuição de pedidos","media",14,""],
+  ["Orientar os entregadores sobre o aplicativo e o processo de entrega","alta",7,""],
+  ["Verificar a quantidade de bags necessária","media",30,"Os valores ficam na aba Orçamento, categoria Bags para entregadores."],
+  ["Verificar a necessidade e a produção de uniformes","baixa",30,"Os valores ficam na aba Orçamento, categoria Uniformes."],
+  ["Definir como será prestado suporte aos entregadores durante a operação","media",10,""]]],
+ ["Configuração e testes do aplicativo",[
+  ["Configurar a cidade, regiões e parâmetros necessários","alta",14,""],
+  ["Confirmar que os estabelecimentos e entregadores estão cadastrados e ativos","alta",7,""],
+  ["Testar cadastro, navegação, pedidos, pagamentos, notificações e acompanhamento da entrega","alta",7,""],
+  ["Realizar pedidos de teste com diferentes estabelecimentos","alta",5,""],
+  ["Registrar e corrigir problemas encontrados","media",3,""],
+  ["Confirmar que os canais de suporte estão funcionando","alta",3,""]]],
+ ["Mídia, marketing e divulgação",[
+  ["Definir a mensagem e a identidade da campanha local","media",30,""],
+  ["Preparar materiais para redes sociais, anúncios e WhatsApp","media",21,""],
+  ["Planejar canais, calendário de publicações e orçamento de divulgação","media",21,"O orçamento de divulgação fica na aba Orçamento."],
+  ["Identificar influenciadores locais","baixa",21,""],
+  ["Registrar contato, negociação, valores, entregas previstas e situação de cada parceria com influenciador","baixa",14,"Use as observações: nome, contato, valor combinado, o que será entregue e a situação."],
+  ["Preparar materiais de divulgação para estabelecimentos e pontos estratégicos da cidade","media",10,""],
+  ["Definir como serão medidos os resultados das ações","baixa",7,""]]],
+ ["Promoções de inauguração",[
+  ["Definir promoções, cupons, combos ou benefícios de lançamento","media",21,""],
+  ["Registrar regras, período de validade e estabelecimentos participantes","media",14,""],
+  ["Validar custos, limites e aprovações necessárias","media",14,""],
+  ["Configurar e testar as promoções no aplicativo","alta",5,""],
+  ["Preparar a divulgação das ofertas para clientes e parceiros","media",7,""]]],
+ ["Prontidão para inauguração",[
+  ["Simular o fluxo completo: cliente, estabelecimento, entregador e suporte","alta",3,""],
+  ["Conferir comunicação, prazos e tratamento de imprevistos","media",3,""],
+  ["Confirmar a disponibilidade das pessoas responsáveis no dia da inauguração","alta",2,""],
+  ["Resolver ou registrar pendências críticas","alta",1,"Pendências críticas são as tarefas de prioridade Alta ainda não concluídas."],
+  ["Fazer uma avaliação final e indicar “Pronto para inaugurar” ou “Ainda não pronto”","alta",1,"Registre a decisão na seção Prontidão, no fim do checklist."],
+  ["Registrar observações e itens que precisam ser resolvidos antes da abertura","media",1,""]]]
+];
+function ckNew(){return{cfg:{inaug:null,avaliacao:null},etapas:[],tarefas:[],loaded:{e:false,t:false},err:false}}
+S.ck={pb:ckNew(),cz:ckNew()};S.ckOpen=new Set();S.ckStale=false;S.ckEdit=null;S.ckShowF=false;
+S.ckF={q:"",etapa:"",resp:"",status:"",prio:"",prazo:""};
+const ckTimers={};
+function pad2(n){return String(n).padStart(2,"0")}
+function ckToday(){const d=new Date();return d.getFullYear()+"-"+pad2(d.getMonth()+1)+"-"+pad2(d.getDate())}
+function ckAdd(s,n){const[y,m,d]=s.split("-").map(Number);return new Date(Date.UTC(y,m-1,d+n)).toISOString().slice(0,10)}
+function ckDiff(a,b){const p=s=>{const[y,m,d]=s.split("-").map(Number);return Date.UTC(y,m-1,d)};return Math.round((p(b)-p(a))/864e5)}
+function ckFmt(s){return s?s.slice(8,10)+"/"+s.slice(5,7)+"/"+s.slice(0,4):""}
+function ckFmtS(s){return s?s.slice(8,10)+"/"+s.slice(5,7):""}
+function ckRef(c){return db.collection("checklists").doc(c)}
+function ckErr(er){console.error(er);toast(er&&er.code==="permission-denied"?"Sem permissão para esta alteração no checklist.":"Não foi possível salvar no checklist. Tente de novo.")}
+function ckReady(c){const K=S.ck[c];return K.loaded.e&&K.loaded.t}
+function ckEtapas(c){return S.ck[c].etapas.slice().sort((a,b)=>(a.ordem||0)-(b.ordem||0)||String(a.id).localeCompare(String(b.id)))}
+function ckTasks(c,etapaId){return S.ck[c].tarefas.filter(t=>!etapaId||t.etapaId===etapaId).sort((a,b)=>(a.ordem||0)-(b.ordem||0)||(a.criadoEm||0)-(b.criadoEm||0))}
+function ckPrazo(c,t){if(t.prazoModo==="rel"){const d=S.ck[c].cfg.inaug;if(!d||t.diasAntes==null||t.diasAntes==="")return null;return ckAdd(d,-Number(t.diasAntes))}return t.prazo||null}
+function ckLate(c,t){const p=ckPrazo(c,t);return !!(p&&p<ckToday()&&t.status!=="concluida")}
+function ckStats(c,list){list=list||S.ck[c].tarefas;const s={total:list.length,done:0,abertas:0,late:0,blocked:0};
+  list.forEach(t=>{if(t.status==="concluida")s.done++;else if(t.status==="bloqueada")s.blocked++;else s.abertas++;if(ckLate(c,t))s.late++});
+  s.pct=s.total?Math.round(s.done/s.total*100):0;return s}
+function ckCrit(c){const all=S.ck[c].tarefas.filter(t=>t.prioridade==="alta");return{all,open:all.filter(t=>t.status!=="concluida")}}
+function ckCanDel(t){return S.admin||(S.user&&t.autorUid===S.user.uid)}
+function ckEtapaNome(c,id){const e=S.ck[c].etapas.find(x=>x.id===id);return e?e.nome:"Sem etapa"}
+function ckTaskById(c,id){return S.ck[c].tarefas.find(x=>x.id===id)}
+function ckDepsOpen(c,t){return (t.deps||[]).map(id=>ckTaskById(c,id)).filter(x=>x&&x.status!=="concluida")}
+function ckSubscribe(){
+  ["pb","cz"].forEach(c=>{const K=S.ck[c];
+    S.unsubs.push(ckRef(c).collection("etapas").onSnapshot(sn=>{K.etapas=sn.docs.map(d=>{const loc=ckTimers[c+"/e/"+d.id]&&K.etapas.find(x=>x.id===d.id);return loc||Object.assign({id:d.id},d.data())});K.loaded.e=true;K.err=false;ckMaybeRender(c)},er=>{console.error(er);K.loaded.e=true;K.err=er&&er.code==="permission-denied"?"perm":"net";ckMaybeRender(c)}));
+    S.unsubs.push(ckRef(c).collection("tarefas").onSnapshot(sn=>{K.tarefas=sn.docs.map(d=>Object.assign({id:d.id},d.data()));K.loaded.t=true;ckMaybeRender(c)},er=>{console.error(er);K.loaded.t=true;K.err=er&&er.code==="permission-denied"?"perm":"net";ckMaybeRender(c)}));
+    S.unsubs.push(ckRef(c).onSnapshot(d=>{const x=d.exists?d.data():{};K.cfg={inaug:x.inaug||null,avaliacao:x.avaliacao||null};ckMaybeRender(c)},()=>{}));
+  })}
+function ckFocusIn(sel){const a=document.activeElement;return !!(a&&a.closest&&a.closest(sel)&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName))}
+function ckMaybeRender(c){
+  if(S.city!==c)return;
+  if(S.view==="home"){softRender();return}
+  if(S.view!=="checklist")return;
+  if(ckFocusIn("#ckList")||Object.keys(ckTimers).length){S.ckStale=true;return}
+  if(ckFocusIn("#ck")){ckRefreshParts();return}
+  S.ckStale=false;renderChecklist()}
+
+/* ----- Cartão no Início ----- */
+function ckHomeCard(c){
+  const K=S.ck[c];
+  if(!ckReady(c))return "";
+  if(K.err==="perm")return "";
+  if(!K.etapas.length)return '<section class="card stack ck-home"><div class="ck-home-h"><h3>Pré-inauguração</h3></div><p class="sub" style="margin:0">'+(S.admin?'Monte o checklist com as 8 etapas padrão para acompanhar a implantação de '+esc(CITIES[c])+'.':'O checklist de '+esc(CITIES[c])+' ainda não foi montado.')+'</p><button class="btn ghost" data-ck="go">Abrir checklist</button></section>';
+  const s=ckStats(c),cr=ckCrit(c),d=K.cfg.inaug;
+  const left=d?ckDiff(ckToday(),d):null;
+  const quando=d?(left>1?"Inauguração em "+left+" dias · "+ckFmt(d):left===1?"Inauguração amanhã":left===0?"Inauguração hoje":"Inauguração prevista para "+ckFmt(d)+" (já passou)"):"Data de inauguração não definida";
+  return '<section class="card stack ck-home"><div class="ck-home-h"><h3>Pré-inauguração</h3>'+ckPill(c)+'</div>'+
+   '<div class="goal"><div class="goal-row"><span>'+esc(quando)+'</span><span class="num">'+s.pct+'%</span></div><div class="bar"><i class="'+(s.pct>=100?"done":"")+'" style="width:'+s.pct+'%"></i></div></div>'+
+   '<p class="sub" style="margin:0"><span class="num">'+s.done+' de '+s.total+'</span> tarefas concluídas'+(s.late?' · <b class="ck-red num">'+s.late+' atrasada'+(s.late>1?"s":"")+'</b>':'')+(s.blocked?' · <b class="ck-red num">'+s.blocked+' bloqueada'+(s.blocked>1?"s":"")+'</b>':'')+(cr.open.length?' · <span class="num">'+cr.open.length+'</span> crítica'+(cr.open.length>1?"s":"")+' aberta'+(cr.open.length>1?"s":""):'')+'</p>'+
+   '<button class="btn ghost" data-ck="go">Abrir checklist</button></section>'}
+function ckPill(c){const cr=ckCrit(c);const t=S.ck[c].tarefas.length;
+  if(!t)return '<span class="pill na">Sem tarefas</span>';
+  return cr.open.length?'<span class="pill no">Ainda não pronto</span>':'<span class="pill go">Críticas concluídas</span>'}
+
+/* ----- Tela do checklist ----- */
+function ckFilterActive(){const f=S.ckF;return !!(f.q.trim()||f.etapa||f.resp||f.status||f.prio||f.prazo)}
+function ckMatch(c,t){const f=S.ckF;
+  if(f.q.trim()){const q=f.q.trim().toLowerCase();if(!((t.nome||"").toLowerCase().includes(q)||(t.descricao||"").toLowerCase().includes(q)))return false}
+  if(f.etapa&&t.etapaId!==f.etapa)return false;
+  if(f.resp){if(f.resp==="__sem"){if((t.responsavel||"").trim())return false}else if((t.responsavel||"").trim().toLowerCase()!==f.resp.toLowerCase())return false}
+  if(f.status){if(f.status==="abertas"){if(t.status==="concluida"||t.status==="bloqueada")return false}else if((t.status||"pendente")!==f.status)return false}
+  if(f.prio&&t.prioridade!==f.prio)return false;
+  if(f.prazo){const p=ckPrazo(c,t),hoje=ckToday();
+    if(f.prazo==="atrasadas"&&!ckLate(c,t))return false;
+    if(f.prazo==="semana"&&!(p&&p>=hoje&&p<=ckAdd(hoje,7)&&t.status!=="concluida"))return false;
+    if(f.prazo==="semprazo"&&p)return false}
+  return true}
+function ckResps(c){const m=new Map();S.ck[c].tarefas.forEach(t=>{const r=(t.responsavel||"").trim();if(r&&!m.has(r.toLowerCase()))m.set(r.toLowerCase(),r)});return [...m.values()].sort((a,b)=>a.localeCompare(b,"pt"))}
+function ckTaskRow(c,t){
+  const st=t.status||"pendente",p=ckPrazo(c,t),late=ckLate(c,t),dop=ckDepsOpen(c,t);
+  const meta=[CK_STL[st]];if((t.responsavel||"").trim())meta.push(t.responsavel.trim());
+  const prazoTxt=p?(late?"atrasada desde "+ckFmtS(p):"até "+ckFmtS(p)):(t.prazoModo==="rel"&&!S.ck[c].cfg.inaug?"prazo depende da data de inauguração":"");
+  return '<div class="ck-task st-'+st+(late?" late":"")+'">'+
+   '<button type="button" class="ck-check" data-ck="toggle" data-id="'+esc(t.id)+'" aria-pressed="'+(st==="concluida")+'" aria-label="'+(st==="concluida"?"Reabrir":"Marcar como concluída")+': '+esc(t.nome)+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>'+
+   '<button type="button" class="ck-tmain" data-ck="open" data-id="'+esc(t.id)+'"><span class="mid"><b>'+esc(t.nome||"Tarefa")+'</b>'+
+    '<small>'+esc(meta.join(" · "))+(prazoTxt?' · <span class="'+(late?"ck-red":"")+'">'+esc(prazoTxt)+'</span>':'')+'</small>'+
+    (st==="bloqueada"?'<small class="ck-why">Bloqueada: '+esc(t.motivoBloqueio||"motivo não informado")+'</small>':'')+
+    (dop.length&&st!=="concluida"?'<small class="ck-dep">Aguardando: '+esc(dop.map(x=>x.nome).join("; "))+'</small>':'')+
+   '</span><span class="ck-prio pr-'+esc(t.prioridade||"media")+'">'+esc(CK_PRL[t.prioridade]||"Média")+'</span></button></div>'}
+function ckEtapaHTML(c,e,idx,n,filtered){
+  const all=ckTasks(c,e.id),list=filtered?all.filter(t=>ckMatch(c,t)):all,s=ckStats(c,all);
+  if(filtered&&!list.length)return "";
+  const open=filtered||S.ckOpen.has(c+"/"+e.id);
+  return '<details class="ck-etapa" data-etapa="'+esc(e.id)+'"'+(open?" open":"")+'>'+
+   '<summary><span class="mid"><b>'+esc(e.nome||"Etapa")+'</b><small><span class="num">'+s.done+'/'+s.total+'</span> concluídas'+(s.late?' · <span class="ck-red num">'+s.late+' atrasada'+(s.late>1?"s":"")+'</span>':'')+(s.blocked?' · <span class="ck-red num">'+s.blocked+' bloqueada'+(s.blocked>1?"s":"")+'</span>':'')+'</small>'+
+   '<span class="bar ck-mini"><i class="'+(s.total&&s.done>=s.total?"done":"")+'" style="width:'+s.pct+'%"></i></span></span><span class="ck-pct num">'+s.pct+'%</span></summary>'+
+   '<div class="ck-body">'+(list.length?list.map(t=>ckTaskRow(c,t)).join(""):'<p class="sub" style="margin:0">Nenhuma tarefa nesta etapa.</p>')+
+    '<button type="button" class="btn ghost" data-ck="newtask" data-etapa="'+esc(e.id)+'">+ Nova tarefa nesta etapa</button>'+
+    (S.admin&&!filtered?'<div class="ck-ecfg"><div class="q"><label for="en-'+esc(e.id)+'">Nome da etapa</label><input type="text" id="en-'+esc(e.id)+'" data-ckef="nome" value="'+esc(e.nome||"")+'"></div>'+
+     '<div class="ck-erow"><button type="button" class="btn quiet" data-ck="up"'+(idx===0?" disabled":"")+' aria-label="Subir etapa">↑ Subir</button><button type="button" class="btn quiet" data-ck="down"'+(idx===n-1?" disabled":"")+' aria-label="Descer etapa">↓ Descer</button></div>'+
+     '<button type="button" class="btn danger" data-ck="delEtapa">Excluir etapa'+(all.length?' e '+all.length+' tarefa'+(all.length>1?"s":""):'')+'</button></div>':'')+
+   '</div></details>'}
+function ckListHTML(c){
+  const et=ckEtapas(c),fil=ckFilterActive();
+  const html=et.map((e,i)=>ckEtapaHTML(c,e,i,et.length,fil)).join("");
+  const orphans=S.ck[c].tarefas.filter(t=>!et.some(e=>e.id===t.etapaId)&&(!fil||ckMatch(c,t)));
+  let out='';
+  if(fil){const n=S.ck[c].tarefas.filter(t=>ckMatch(c,t)).length;out+='<div class="ck-fres"><span><b class="num">'+n+'</b> tarefa'+(n===1?"":"s")+' encontrada'+(n===1?"":"s")+'</span><button type="button" class="linkbtn" data-ck="clearf">Limpar filtros</button></div>'}
+  out+=html||(fil?'<div class="card sub">Nenhuma tarefa com esses filtros.</div>':'');
+  if(orphans.length)out+='<section class="card stack"><h3>Tarefas sem etapa</h3>'+orphans.map(t=>ckTaskRow(c,t)).join("")+'</section>';
+  return out}
+function ckStatsHTML(c){
+  const s=ckStats(c);
+  const tile=(k,n,l,cls)=>'<button type="button" class="ck-tile '+cls+'" data-ck="tile" data-k="'+k+'"><b class="num">'+n+'</b><span>'+l+'</span></button>';
+  return '<div class="ck-big"><span class="num">'+s.pct+'%</span><small>concluído</small></div>'+
+   '<div class="bar"><i class="'+(s.pct>=100?"done":"")+'" style="width:'+s.pct+'%"></i></div>'+
+   '<p class="sub" style="margin:0"><span class="num">'+s.done+' de '+s.total+'</span> tarefas concluídas</p>'+
+   '<div class="ck-tiles">'+tile("abertas",s.abertas,"Pendentes","")+tile("concluida",s.done,"Concluídas","ok")+tile("atrasadas",s.late,"Atrasadas",s.late?"bad":"")+tile("bloqueada",s.blocked,"Bloqueadas",s.blocked?"bad":"")+'</div>'}
+function ckInaugInfo(c){const d=S.ck[c].cfg.inaug;if(!d)return "Defina a data para calcular os prazos relativos.";const l=ckDiff(ckToday(),d);
+  return l>1?"Faltam "+l+" dias":l===1?"É amanhã":l===0?"É hoje":"Passou há "+(-l)+" dia"+(-l>1?"s":"")}
+function ckReadyBodyHTML(c){
+  const cr=ckCrit(c),ok=!cr.open.length,K=S.ck[c],a=K.cfg.avaliacao;
+  const pct=cr.all.length?Math.round((cr.all.length-cr.open.length)/cr.all.length*100):100;
+  let h='<div class="ck-home-h"><h3>Prontidão para inauguração</h3>'+(ok?'<span class="pill go">Critérios atendidos</span>':'<span class="pill no">Ainda não pronto</span>')+'</div>'+
+   '<p class="ck-rule">Regra: tarefas de prioridade <b>Alta</b> são críticas. A cidade só pode ser marcada como pronta quando todas elas estiverem <b>Concluídas</b>.</p>'+
+   '<div class="goal"><div class="goal-row"><span>Tarefas críticas concluídas</span><span class="num">'+(cr.all.length-cr.open.length)+' / '+cr.all.length+'</span></div><div class="bar"><i class="'+(ok?"done":"")+'" style="width:'+pct+'%"></i></div></div>';
+  if(cr.open.length)h+='<div class="stack ck-critlist"><span class="ql">Críticas em aberto</span>'+cr.open.sort((x,y)=>(ckPrazo(c,x)||"9").localeCompare(ckPrazo(c,y)||"9")).map(t=>ckTaskRow(c,t)).join("")+'</div>';
+  if(a&&a.status){const pr=a.status==="pronto";
+    h+='<div class="ck-aval '+(pr?"go":"no")+'"><b>'+(pr?"Avaliação final: Pronto para inaugurar":"Avaliação final: Ainda não pronto")+'</b><small>'+esc((a.autorNome||"")+(a.em?" · "+new Date(a.em).toLocaleString("pt-BR",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"}):""))+'</small>'+(a.obs?'<p>'+esc(a.obs)+'</p>':'')+'</div>';
+    if(pr&&!ok)h+='<div class="banner warn"><span>A última avaliação indicou “Pronto”, mas hoje há <b class="num">'+cr.open.length+'</b> tarefa'+(cr.open.length>1?"s":"")+' crítica'+(cr.open.length>1?"s":"")+' em aberto. A cidade não está pronta até elas serem concluídas.</span></div>'}
+  else h+='<p class="sub" style="margin:0">Nenhuma avaliação final registrada.</p>';
+  return h}
+function ckReadyFormHTML(c){
+  if(!S.admin)return '<p class="sub" style="margin:0">A avaliação final é registrada pelo administrador.</p>';
+  const ok=!ckCrit(c).open.length;
+  return '<div class="q"><label for="ck-aval-obs">Observações da avaliação</label><textarea id="ck-aval-obs" placeholder="Itens que precisam ser resolvidos antes da abertura, combinados do dia, etc."></textarea></div>'+
+   '<div class="ck-erow"><button type="button" class="btn" data-ck="aval" data-v="pronto" id="ck-btn-pronto"'+(ok?"":" disabled")+'>Pronto para inaugurar</button><button type="button" class="btn quiet" data-ck="aval" data-v="nao">Ainda não pronto</button></div>'+
+   '<p class="sub" id="ck-pronto-hint" style="margin:0"'+(ok?" hidden":"")+'>“Pronto para inaugurar” fica liberado quando todas as tarefas críticas estiverem concluídas.</p>'}
+function ckFiltersHTML(c){
+  const f=S.ckF,sel=(id,k,opts,l)=>'<div class="q"><label for="'+id+'">'+l+'</label><select id="'+id+'" data-ckfil="'+k+'">'+opts.map(([v,t])=>'<option value="'+esc(v)+'"'+(f[k]===v?" selected":"")+'>'+esc(t)+'</option>').join("")+'</select></div>';
+  return sel("ckf-etapa","etapa",[["","Todas"]].concat(ckEtapas(c).map(e=>[e.id,e.nome])),"Etapa")+
+   sel("ckf-resp","resp",[["","Todos"],["__sem","Sem responsável"]].concat(ckResps(c).map(r=>[r,r])),"Responsável")+
+   sel("ckf-status","status",[["","Todos"],["abertas","Pendentes e em andamento"]].concat(CK_ST),"Status")+
+   sel("ckf-prio","prio",[["","Todas"]].concat(CK_PR),"Prioridade")+
+   sel("ckf-prazo","prazo",[["","Todos"],["atrasadas","Atrasadas"],["semana","Vencem em 7 dias"],["semprazo","Sem prazo"]],"Prazo")}
+function ckNFil(){const f=S.ckF;return ["etapa","resp","status","prio","prazo"].filter(k=>f[k]).length}
+function renderChecklist(){
+  const c=S.city,K=S.ck[c];
+  const head='<div class="formhead"><button type="button" class="back" data-ck="home" aria-label="Voltar ao Início">'+BACK+'</button><div style="min-width:0"><div class="eyebrow">'+esc(CITIES[c])+'</div><h2>Pré-inauguração</h2></div></div>';
+  if(!ckReady(c)){app.innerHTML='<div class="stack" id="ck">'+head+'<div class="empty"><img src="'+MASCOTE+'" alt=""><div>Carregando…</div></div></div>';return}
+  if(K.err==="perm"){app.innerHTML='<div class="stack" id="ck">'+head+'<div class="banner warn"><span>O checklist ainda não foi liberado para o seu acesso. Fale com o Lucas.</span></div></div>';return}
+  if(!K.etapas.length&&!K.tarefas.length){
+    app.innerHTML='<div class="stack" id="ck">'+statusBanner()+head+'<section class="card stack"><h3>Checklist de '+esc(CITIES[c])+'</h3>'+
+     (S.admin?'<p class="sub" style="margin:0">Cria o modelo com '+CK_TPL.length+' etapas e '+CK_TPL.reduce((s,e)=>s+e[1].length,0)+' tarefas, do planejamento à prontidão para inaugurar. Tudo pode ser editado, excluído ou complementado depois. Os prazos sugeridos contam a partir da data de inauguração.</p><button type="button" class="btn" data-ck="tpl">Montar checklist de '+esc(CITIES[c])+'</button><button type="button" class="btn quiet" data-ck="newEtapa">Começar com uma etapa em branco</button>':'<p class="sub" style="margin:0">O administrador ainda não montou o checklist desta cidade.</p>')+'</section></div>';return}
+  const d=K.cfg.inaug,nf=ckNFil();
+  app.innerHTML='<div class="stack" id="ck">'+statusBanner()+head+
+   '<div class="ck-grid"><aside class="ck-side stack">'+
+    '<section class="card stack"><div class="q"><label for="ck-inaug">Data prevista de inauguração</label>'+(S.admin?'<input type="date" id="ck-inaug" value="'+esc(d||"")+'">':'<div class="ck-date">'+(d?esc(ckFmt(d)):"Não definida")+'</div>')+'<small class="sub" id="ckInaugInfo">'+esc(ckInaugInfo(c))+'</small></div></section>'+
+    '<section class="card stack" id="ckStats">'+ckStatsHTML(c)+'</section>'+
+    '<button type="button" class="card ck-readylink" data-ck="toready"><span>Prontidão</span><span id="ckPill">'+ckPill(c)+'</span></button>'+
+   '</aside><div class="ck-main stack">'+
+    '<div class="ck-tools"><label class="sr" for="ck-q">Buscar tarefa</label><input type="search" id="ck-q" placeholder="Buscar por nome ou descrição" value="'+esc(S.ckF.q)+'">'+
+     '<button type="button" class="btn quiet" data-ck="filtros" aria-expanded="'+S.ckShowF+'">Filtros'+(nf?' <span class="ck-nf num">'+nf+'</span>':'')+'</button></div>'+
+    '<div class="card ck-filters" id="ckFilters"'+(S.ckShowF?"":" hidden")+'>'+ckFiltersHTML(c)+'</div>'+
+    '<div class="stack" id="ckList">'+ckListHTML(c)+'</div>'+
+    (S.admin?'<button type="button" class="btn quiet" data-ck="newEtapa">+ Nova etapa</button>':'')+
+    '<section class="card stack" id="ckReady"><div class="stack" id="ckReadyBody">'+ckReadyBodyHTML(c)+'</div>'+ckReadyFormHTML(c)+'</section>'+
+   '</div></div></div>';
+}
+function ckRefreshParts(){
+  const c=S.city;const set=(id,h)=>{const el=document.getElementById(id);if(el)el.innerHTML=h};
+  if(!ckFocusIn("#ckList"))set("ckList",ckListHTML(c));
+  set("ckStats",ckStatsHTML(c));set("ckReadyBody",ckReadyBodyHTML(c));set("ckPill",ckPill(c));
+  const ii=document.getElementById("ckInaugInfo");if(ii)ii.textContent=ckInaugInfo(c);
+  const ok=!ckCrit(c).open.length,bp=document.getElementById("ck-btn-pronto"),hint=document.getElementById("ck-pronto-hint");
+  if(bp)bp.disabled=!ok;if(hint)hint.hidden=ok;
+  const fb=document.querySelector('[data-ck="filtros"]');if(fb){const nf=ckNFil();fb.innerHTML="Filtros"+(nf?' <span class="ck-nf num">'+nf+'</span>':'')}}
+
+/* ----- Editor de tarefa ----- */
+function ckOpenEditor(c,t,etapaId){
+  S.ckEdit=t?{id:t.id,c,d:JSON.parse(JSON.stringify(t))}:{id:null,c,d:{etapaId:etapaId||(ckEtapas(c)[0]||{}).id||"",nome:"",descricao:"",responsavel:"",prazoModo:S.ck[c].cfg.inaug?"rel":"data",prazo:null,diasAntes:null,status:"pendente",prioridade:"media",obs:"",motivoBloqueio:"",deps:[]}};
+  delete S.ckEdit.d.id;S.ckBackScroll=window.scrollY;go("tarefa")}
+function renderTarefa(){
+  const E=S.ckEdit;if(!E){S.view="checklist";return renderChecklist()}
+  const c=E.c,t=E.d,K=S.ck[c],et=ckEtapas(c);
+  const chips=(k,opts,cur)=>'<div class="chips" role="group">'+opts.map(([v,l])=>'<button type="button" class="chip" data-ckt="'+k+'" data-v="'+v+'" aria-pressed="'+(cur===v)+'">'+l+'</button>').join("")+'</div>';
+  const rel=t.prazoModo==="rel";
+  const relInfo=rel?(K.cfg.inaug?(t.diasAntes!=null&&t.diasAntes!==""?"Prazo calculado: "+ckFmt(ckAdd(K.cfg.inaug,-Number(t.diasAntes)))+" (inauguração em "+ckFmt(K.cfg.inaug)+")":"Informe quantos dias antes da inauguração."):"A data de inauguração ainda não foi definida. O prazo aparece assim que ela for preenchida."):"";
+  const others=et.map(e=>{const ts=ckTasks(c,e.id).filter(x=>x.id!==E.id);return ts.length?'<fieldset class="ck-depg"><legend>'+esc(e.nome)+'</legend>'+ts.map(x=>'<label class="ck-depi"><input type="checkbox" data-dep="'+esc(x.id)+'"'+((t.deps||[]).includes(x.id)?" checked":"")+'><span>'+esc(x.nome)+(x.status==="concluida"?' <small>(concluída)</small>':'')+'</span></label>').join("")+'</fieldset>':''}).join("");
+  const nd=(t.deps||[]).filter(id=>ckTaskById(c,id)).length;
+  const canDel=E.id&&ckCanDel(K.tarefas.find(x=>x.id===E.id)||t);
+  app.innerHTML='<form class="stack" id="ckForm" novalidate><div class="formhead"><button type="button" class="back" data-ck="cancelT" aria-label="Voltar">'+BACK+'</button><div style="min-width:0"><div class="eyebrow">'+esc(CITIES[c])+' · Pré-inauguração</div><h2>'+(E.id?"Editar tarefa":"Nova tarefa")+'</h2></div></div>'+
+   '<section class="section">'+
+    '<div class="q"><label for="ckt-nome">Nome da tarefa <span class="req">*</span></label><input type="text" id="ckt-nome" data-ckv="nome" value="'+esc(t.nome||"")+'"></div>'+
+    '<div class="q"><label for="ckt-desc">Descrição</label><textarea id="ckt-desc" data-ckv="descricao">'+esc(t.descricao||"")+'</textarea></div>'+
+    '<div class="q"><label for="ckt-etapa">Etapa</label><select id="ckt-etapa" class="ck-select" data-ckv="etapaId">'+et.map(e=>'<option value="'+esc(e.id)+'"'+(e.id===t.etapaId?" selected":"")+'>'+esc(e.nome)+'</option>').join("")+'</select></div>'+
+    '<div class="q"><label for="ckt-resp">Responsável</label><input type="text" id="ckt-resp" data-ckv="responsavel" list="ckt-resps" value="'+esc(t.responsavel||"")+'" placeholder="Nome de quem cuida desta tarefa"><datalist id="ckt-resps">'+ckResps(c).map(r=>'<option value="'+esc(r)+'">').join("")+'</datalist></div>'+
+   '</section><section class="section">'+
+    '<div class="q"><span class="ql">Status</span>'+chips("status",CK_ST,t.status||"pendente")+'</div>'+
+    (t.status==="bloqueada"?'<div class="q"><label for="ckt-mot">Motivo do bloqueio <span class="req">*</span></label><textarea id="ckt-mot" data-ckv="motivoBloqueio" placeholder="O que está impedindo e de quem depende">'+esc(t.motivoBloqueio||"")+'</textarea></div>':'')+
+    '<div class="q"><span class="ql">Prioridade</span>'+chips("prioridade",CK_PR,t.prioridade||"media")+'<small class="sub">Prioridade Alta = tarefa crítica para a prontidão.</small></div>'+
+   '</section><section class="section">'+
+    '<div class="q"><span class="ql">Prazo</span>'+chips("prazoModo",[["data","Data fixa"],["rel","Antes da inauguração"]],rel?"rel":"data")+'</div>'+
+    (rel?'<div class="q"><label for="ckt-dias">Dias antes da inauguração</label><input type="number" inputmode="numeric" min="0" step="1" id="ckt-dias" data-ckv="diasAntes" data-num="1" value="'+(t.diasAntes==null?"":esc(t.diasAntes))+'"><small class="sub" id="ckt-relinfo">'+esc(relInfo)+'</small></div>'
+        :'<div class="q"><label for="ckt-prazo">Data limite</label><input type="date" id="ckt-prazo" data-ckv="prazo" value="'+esc(t.prazo||"")+'"></div>')+
+   '</section><section class="section">'+
+    '<div class="q"><label for="ckt-obs">Observações</label><textarea id="ckt-obs" data-ckv="obs" placeholder="Contatos, combinados, valores, confirmações externas">'+esc(t.obs||"")+'</textarea></div>'+
+    (others?'<details class="ck-deps"><summary>Depende de outras tarefas <span class="num">('+nd+')</span></summary><p class="sub" style="margin:0">Marque as tarefas que precisam terminar antes desta.</p>'+others+'</details>':'')+
+    (E.id&&t.autorNome?'<small class="sub">Criada por '+esc(t.autorNome)+(t.atualizadoPor?' · última alteração por '+esc(t.atualizadoPor):'')+'</small>':'')+
+   '</section>'+
+   (canDel?'<button type="button" class="btn danger" data-ck="delTask">Excluir tarefa</button>':'')+
+   '<p class="err" id="ckt-err" hidden></p>'+
+   '<div class="savebar"><div class="savebar-in"><button type="button" class="btn quiet" data-ck="cancelT">Cancelar</button><button type="submit" class="btn" id="ck-save">Salvar tarefa</button></div></div></form>';
+  window.scrollTo(0,0)}
+function ckBackToList(etapaId){S.ckEdit=null;if(etapaId)S.ckOpen.add(S.city+"/"+etapaId);S.view="checklist";render();
+  const el=etapaId&&document.querySelector('#ck details[data-etapa="'+CSS.escape(etapaId)+'"]');if(el)el.scrollIntoView({block:"start"});else window.scrollTo(0,S.ckBackScroll||0)}
+function ckSubmit(){
+  const E=S.ckEdit;if(!E)return;const t=E.d,er=document.getElementById("ckt-err");
+  const bad=(msg,id)=>{er.textContent=msg;er.hidden=false;const el=document.getElementById(id);if(el){el.focus();el.scrollIntoView({block:"center"})}};
+  if(!String(t.nome||"").trim())return bad("Dê um nome à tarefa.","ckt-nome");
+  if(t.status==="bloqueada"&&!String(t.motivoBloqueio||"").trim())return bad("Informe o motivo do bloqueio.","ckt-mot");
+  if(!t.etapaId)return bad("Escolha uma etapa.","ckt-etapa");
+  const now=Date.now(),c=E.c;
+  const doc={etapaId:t.etapaId,nome:t.nome.trim(),descricao:t.descricao||"",responsavel:(t.responsavel||"").trim(),
+    prazoModo:t.prazoModo==="rel"?"rel":"data",prazo:t.prazoModo==="rel"?null:(t.prazo||null),diasAntes:t.prazoModo==="rel"&&t.diasAntes!=null&&t.diasAntes!==""?Number(t.diasAntes):null,
+    status:t.status||"pendente",prioridade:t.prioridade||"media",obs:t.obs||"",motivoBloqueio:t.status==="bloqueada"?(t.motivoBloqueio||"").trim():"",
+    deps:(t.deps||[]).filter(id=>id!==E.id&&ckTaskById(c,id)),ordem:t.ordem||now,criadoEm:t.criadoEm||now,atualizadoEm:now,
+    autorUid:t.autorUid||S.user.uid,autorNome:t.autorNome||S.nome,atualizadoPor:S.nome};
+  const ref=E.id?ckRef(c).collection("tarefas").doc(E.id):ckRef(c).collection("tarefas").doc();
+  ref.set(doc).catch(ckErr);
+  if(doc.status==="concluida"&&ckDepsOpen(c,doc).length)toast("Tarefa salva. Atenção: ela depende de tarefas ainda abertas.");
+  else toast(S.online?"Tarefa salva":"Tarefa salva no celular · será enviada quando a internet voltar");
+  ckBackToList(doc.etapaId)}
+function ckCreateTemplate(c){
+  const b=db.batch(),now=Date.now();let o=0;
+  CK_TPL.forEach(([nome,tarefas],i)=>{const eid="etapa"+(i+1);
+    b.set(ckRef(c).collection("etapas").doc(eid),{nome,ordem:i+1,criadoEm:now});
+    tarefas.forEach(([tn,pr,dias,desc])=>{o++;
+      b.set(ckRef(c).collection("tarefas").doc(),{etapaId:eid,nome:tn,descricao:desc||"",responsavel:"",prazoModo:dias==null?"data":"rel",prazo:null,diasAntes:dias,
+        status:"pendente",prioridade:pr,obs:"",motivoBloqueio:"",deps:[],ordem:o,criadoEm:now,atualizadoEm:now,autorUid:S.user.uid,autorNome:S.nome,atualizadoPor:S.nome})})});
+  b.commit().then(()=>{}).catch(ckErr);S.ckOpen.add(c+"/etapa1");toast("Checklist montado")}
+function ckSaveEtapa(c,id,now){
+  const k=c+"/e/"+id;clearTimeout(ckTimers[k]);
+  const f=()=>{delete ckTimers[k];const e=S.ck[c].etapas.find(x=>x.id===id);if(e)ckRef(c).collection("etapas").doc(id).set({nome:e.nome||"Etapa",ordem:e.ordem||0,criadoEm:e.criadoEm||Date.now()}).catch(ckErr)};
+  if(now)f();else ckTimers[k]=setTimeout(f,700)}
+function ckOnClick(t){
+  const c=S.city,K=S.ck[c],a=t.dataset.ck;
+  if(a==="go"){S.ckF={q:"",etapa:"",resp:"",status:"",prio:"",prazo:""};go("checklist");return}
+  if(a==="home"){go("home");return}
+  if(a==="tpl"){if(!S.admin)return;ckCreateTemplate(c);return}
+  if(a==="newEtapa"){if(!S.admin)return;const id="e"+Date.now().toString(36);const ordem=Math.max(0,...K.etapas.map(e=>e.ordem||0))+1;
+    K.etapas.push({id,nome:"Nova etapa",ordem,criadoEm:Date.now()});S.ckOpen.add(c+"/"+id);ckSaveEtapa(c,id,true);renderChecklist();
+    const inp=document.getElementById("en-"+id);if(inp){inp.scrollIntoView({block:"center"});inp.focus();inp.select()}return}
+  if(a==="filtros"){S.ckShowF=!S.ckShowF;const p=document.getElementById("ckFilters");if(p)p.hidden=!S.ckShowF;t.setAttribute("aria-expanded",String(S.ckShowF));return}
+  if(a==="clearf"){S.ckF={q:"",etapa:"",resp:"",status:"",prio:"",prazo:""};renderChecklist();return}
+  if(a==="tile"){const k=t.dataset.k;S.ckF=Object.assign({},S.ckF,{status:"",prazo:""});if(k==="atrasadas")S.ckF.prazo="atrasadas";else S.ckF.status=k;S.ckShowF=true;renderChecklist();
+    const l=document.getElementById("ckList");if(l)l.scrollIntoView({block:"start"});return}
+  if(a==="toready"){const r=document.getElementById("ckReady");if(r)r.scrollIntoView({block:"start"});return}
+  if(a==="open"){const tk=ckTaskById(c,t.dataset.id);if(tk)ckOpenEditor(c,tk);return}
+  if(a==="newtask"){ckOpenEditor(c,null,t.dataset.etapa);return}
+  if(a==="toggle"){const tk=ckTaskById(c,t.dataset.id);if(!tk)return;const done=tk.status!=="concluida";
+    const nd=done?"concluida":"pendente";const upd={status:nd,motivoBloqueio:"",atualizadoEm:Date.now(),atualizadoPor:S.nome};
+    Object.assign(tk,upd);ckRef(c).collection("tarefas").doc(tk.id).update(upd).catch(ckErr);
+    if(done&&ckDepsOpen(c,tk).length)toast("Concluída. Atenção: depende de tarefas ainda abertas.");
+    ckRefreshParts();return}
+  if(a==="aval"){if(!S.admin)return;const v=t.dataset.v;if(v==="pronto"&&ckCrit(c).open.length){toast("Ainda há tarefas críticas em aberto");return}
+    const obs=(document.getElementById("ck-aval-obs")||{}).value||"";
+    const av={status:v,obs:obs.trim(),em:Date.now(),autorNome:S.nome};K.cfg.avaliacao=av;
+    ckRef(c).set({avaliacao:av},{merge:true}).catch(ckErr);toast(v==="pronto"?"Registrado: pronto para inaugurar":"Registrado: ainda não pronto");ckRefreshParts();
+    const ta=document.getElementById("ck-aval-obs");if(ta)ta.value="";return}
+  if(a==="cancelT"){const E=S.ckEdit;ckBackToList(E&&E.d.etapaId);return}
+  if(a==="delTask"){const E=S.ckEdit;if(!E||!E.id)return;
+    if(!t.classList.contains("armed")){t.classList.add("armed");t.textContent="Toque de novo para excluir a tarefa";setTimeout(()=>{if(t.isConnected){t.classList.remove("armed");t.textContent="Excluir tarefa"}},3500);return}
+    ckRef(c).collection("tarefas").doc(E.id).delete().catch(ckErr);K.tarefas=K.tarefas.filter(x=>x.id!==E.id);toast("Tarefa excluída");ckBackToList(E.d.etapaId);return}
+  if(S.view==="tarefa"&&t.dataset.ckt){const E=S.ckEdit;const k=t.dataset.ckt,v=t.dataset.v;E.d[k]=v;
+    if(k==="prazoModo"&&v==="rel"&&E.d.diasAntes==null&&E.d.prazo&&K.cfg.inaug){const dd=ckDiff(E.d.prazo,K.cfg.inaug);if(dd>=0)E.d.diasAntes=dd}
+    if(k==="prazoModo"&&v==="data"&&!E.d.prazo){const p=ckPrazo(c,Object.assign({},E.d,{prazoModo:"rel"}));if(p)E.d.prazo=p}
+    const y=window.scrollY;renderTarefa();window.scrollTo(0,y);
+    if(k==="status"&&v==="bloqueada"){const m=document.getElementById("ckt-mot");if(m)m.focus()}return}
+  const det=t.closest("details[data-etapa]");const e=det&&K.etapas.find(x=>x.id===det.dataset.etapa);if(!e)return;
+  if(a==="up"||a==="down"){if(!S.admin)return;const et=ckEtapas(c),i=et.findIndex(x=>x.id===e.id),j=a==="up"?i-1:i+1;if(j<0||j>=et.length)return;
+    const o=et[j];const oi=e.ordem||i+1,oj=o.ordem||j+1;e.ordem=oj===oi?(a==="up"?oi-1:oi+1):oj;o.ordem=oi;ckSaveEtapa(c,e.id,true);ckSaveEtapa(c,o.id,true);renderChecklist();
+    const el=document.querySelector('#ck details[data-etapa="'+CSS.escape(e.id)+'"]');if(el)el.scrollIntoView({block:"center"});return}
+  if(a==="delEtapa"){if(!S.admin)return;
+    if(!t.classList.contains("armed")){t.classList.add("armed");t.textContent="Toque de novo para confirmar a exclusão";setTimeout(()=>{if(t.isConnected){t.classList.remove("armed");t.textContent="Excluir etapa"}},3500);return}
+    const b=db.batch();b.delete(ckRef(c).collection("etapas").doc(e.id));const ts=ckTasks(c,e.id);ts.forEach(x=>b.delete(ckRef(c).collection("tarefas").doc(x.id)));
+    clearTimeout(ckTimers[c+"/e/"+e.id]);delete ckTimers[c+"/e/"+e.id];
+    b.commit().catch(ckErr);K.etapas=K.etapas.filter(x=>x.id!==e.id);K.tarefas=K.tarefas.filter(x=>x.etapaId!==e.id);S.ckOpen.delete(c+"/"+e.id);
+    toast("Etapa excluída"+(ts.length?" com "+ts.length+" tarefa"+(ts.length>1?"s":""):""));renderChecklist();return}
+}
+function ckOnInput(el){
+  const c=S.city;
+  if(S.view==="tarefa"){const E=S.ckEdit;if(!E)return;const k=el.dataset.ckv;if(!k||el.tagName==="SELECT")return;
+    if(el.dataset.num){const v=el.value===""?null:Number(el.value);E.d[k]=v==null||isNaN(v)?null:Math.max(0,Math.round(v))}else E.d[k]=el.value;
+    if(k==="diasAntes"){const info=document.getElementById("ckt-relinfo");const K=S.ck[c];if(info&&K.cfg.inaug)info.textContent=E.d.diasAntes!=null?"Prazo calculado: "+ckFmt(ckAdd(K.cfg.inaug,-E.d.diasAntes))+" (inauguração em "+ckFmt(K.cfg.inaug)+")":"Informe quantos dias antes da inauguração."}
+    return}
+  if(el.id==="ck-q"){S.ckF.q=el.value;const l=document.getElementById("ckList");if(l)l.innerHTML=ckListHTML(c);return}
+  if(el.dataset.ckef==="nome"){const det=el.closest("details[data-etapa]");const e=det&&S.ck[c].etapas.find(x=>x.id===det.dataset.etapa);if(!e)return;e.nome=el.value;
+    const b=det.querySelector("summary b");if(b)b.textContent=e.nome||"Etapa";ckSaveEtapa(c,e.id)}}
+function ckOnChange(el){
+  const c=S.city,K=S.ck[c];
+  if(S.view==="tarefa"){const E=S.ckEdit;if(!E)return;
+    if(el.dataset.dep){const id=el.dataset.dep;const s=new Set(E.d.deps||[]);if(el.checked)s.add(id);else s.delete(id);E.d.deps=[...s];
+      const sm=document.querySelector(".ck-deps summary .num");if(sm)sm.textContent="("+E.d.deps.filter(x=>ckTaskById(c,x)).length+")";return}
+    if(el.dataset.ckv==="etapaId"){E.d.etapaId=el.value;return}
+    if(el.dataset.ckv==="prazo"){E.d.prazo=el.value||null;return}
+    return}
+  if(el.id==="ck-inaug"){if(!S.admin)return;K.cfg.inaug=el.value||null;ckRef(c).set({inaug:el.value||null},{merge:true}).catch(ckErr);ckRefreshParts();toast(el.value?"Data de inauguração salva":"Data de inauguração removida");return}
+  if(el.dataset.ckfil){S.ckF[el.dataset.ckfil]=el.value;ckRefreshParts();return}}
+
 /* ---------- Firebase ---------- */
 let auth=null,db=null;
 const ERR={"auth/invalid-credential":"E-mail ou senha incorretos.","auth/wrong-password":"E-mail ou senha incorretos.","auth/user-not-found":"E-mail ou senha incorretos.","auth/invalid-email":"Esse e-mail não parece válido.","auth/too-many-requests":"Muitas tentativas. Espere alguns minutos e tente de novo.","auth/network-request-failed":"Sem internet. No primeiro acesso é preciso estar conectado.","auth/user-disabled":"Este acesso foi desativado. Fale com o Lucas.","auth/missing-password":"Digite a senha."};
@@ -790,12 +1236,13 @@ function startData(){
     if(S.view!=="orcamento")softRender()},er=>{console.error(er);toast(er&&er.code==="permission-denied"?"Seu e-mail ainda não foi liberado na equipe. Fale com o Lucas.":"Não foi possível carregar as fichas. Confira sua conexão.")}));
   S.unsubs.push(db.collection("matriz").doc("notas").onSnapshot(d=>{if(d.exists){const x=d.data();S.notas={pb:Object.assign({},x.pb),cz:Object.assign({},x.cz)};if(S.view==="placar")renderPlacar()}},()=>{}));
   orcSubscribe();
+  ckSubscribe();
 }
 function checkAdmin(){
   // Só administradores conseguem ler admin/check (regra no Firebase). Sem permissão = usuário comum.
   db.collection("admin").doc("check").get().then(()=>{S.admin=true;softRender()}).catch(()=>{});
 }
-function stopData(){S.unsubs.forEach(u=>{try{u()}catch(e){}});S.unsubs=[];S.fichas=[];["pb","cz"].forEach(c=>{S.orc[c].itens=[];S.orc[c].loaded=false;S.orc[c].err=false})}
+function stopData(){S.unsubs.forEach(u=>{try{u()}catch(e){}});S.unsubs=[];S.fichas=[];["pb","cz"].forEach(c=>{S.orc[c].itens=[];S.orc[c].loaded=false;S.orc[c].err=false;S.ck[c]=ckNew()})}
 function initFirebase(){
   if(configOk&&!window.firebase){S.noSdk=true}
   if(!configOk||!window.firebase){render();return}
@@ -811,7 +1258,7 @@ function initFirebase(){
 }
 
 /* ---------- Ações ---------- */
-function softRender(){if(S.view==="form")return;if(S.view==="orcamento"&&orcBusy()){S.orcStale=true;return}render()}
+function softRender(){if(S.view==="form"||S.view==="tarefa")return;if(S.view==="checklist"){ckMaybeRender(S.city);return}if(S.view==="orcamento"&&orcBusy()){S.orcStale=true;return}render()}
 function go(v){S.view=v;render();if(v!=="form")window.scrollTo(0,0)}
 function draftKey(t,c){return "pesquisaCampoMD.draft."+t+"."+c}
 function startForm(t,existing){
@@ -863,6 +1310,7 @@ document.getElementById("nav").addEventListener("click",ev=>{const b=ev.target.c
 app.addEventListener("click",ev=>{
   const t=ev.target.closest("button");if(!t)return;
   if(t.dataset.oa&&S.view==="orcamento"){orcOnClick(t);return}
+  if((t.dataset.ck||t.dataset.ckt)&&(S.view==="checklist"||S.view==="tarefa"||S.view==="home")){ckOnClick(t);return}
   if(t.id==="lg-reset"){const em=(document.getElementById("lg-email").value||"").trim();const er=document.getElementById("lg-err");
     if(!em){er.textContent="Digite seu e-mail acima e toque de novo em “Esqueci minha senha”.";er.hidden=false;return}
     auth.sendPasswordResetEmail(em).then(()=>{er.hidden=true;toast("Enviamos um link para "+em+" criar uma nova senha")}).catch(e=>{er.textContent=errMsg(e);er.hidden=false});return}
@@ -884,11 +1332,12 @@ app.addEventListener("click",ev=>{
 });
 app.addEventListener("input",ev=>{
   if(S.view==="orcamento"){orcOnInput(ev.target);return}
+  if(S.view==="checklist"||S.view==="tarefa"){ckOnInput(ev.target);return}
   const el=ev.target;if(S.view!=="form"||!S.edit||!el.dataset.k)return;
   if(el.dataset.num){const v=el.value===""?null:Number(el.value);S.edit.resp[el.dataset.k]=isNaN(v)?null:v}else S.edit.resp[el.dataset.k]=el.value;
   saveDraft()});
-app.addEventListener("change",ev=>{const s=ev.target;if(s.dataset&&s.dataset.crit){setNota(s.dataset.c,s.dataset.crit,s.value?Number(s.value):null)}});
-app.addEventListener("keydown",ev=>{if(ev.key==="Enter"&&ev.target.tagName==="INPUT"&&(S.view==="form"||S.view==="orcamento")){ev.preventDefault();ev.target.blur()}});
+app.addEventListener("change",ev=>{const s=ev.target;if(S.view==="checklist"||S.view==="tarefa"){ckOnChange(s);return}if(s.dataset&&s.dataset.crit){setNota(s.dataset.c,s.dataset.crit,s.value?Number(s.value):null)}});
+app.addEventListener("keydown",ev=>{if(ev.key==="Enter"&&ev.target.tagName==="INPUT"&&(S.view==="form"||S.view==="orcamento"||S.view==="checklist"||S.view==="tarefa")){ev.preventDefault();ev.target.blur()}});
 app.addEventListener("submit",ev=>{
   ev.preventDefault();const f=ev.target;
   if(f.id==="loginForm"){
@@ -901,8 +1350,11 @@ app.addEventListener("submit",ev=>{
     if(nm.length<2){er.textContent="Digite seu nome.";er.hidden=false;return}
     S.user.updateProfile({displayName:nm}).then(()=>{S.nome=nm;S.view="home";render()}).catch(()=>{er.textContent="Não foi possível salvar. Confira a internet.";er.hidden=false});return}
   if(f.id==="ficha"){if(ev.submitter&&ev.submitter.id!=="save")return;submitForm()}
+  if(f.id==="ckForm"){if(ev.submitter&&ev.submitter.id!=="ck-save")return;ckSubmit()}
 });
 app.addEventListener("toggle",ev=>{const d=ev.target;if(!d||!d.matches||!d.matches("details[data-cat]"))return;const k=S.city+"/"+d.dataset.cat;if(d.open)S.orcOpen.add(k);else S.orcOpen.delete(k)},true);
+app.addEventListener("toggle",ev=>{const d=ev.target;if(!d||!d.matches||!d.matches("details[data-etapa]"))return;const k=S.city+"/"+d.dataset.etapa;if(d.open)S.ckOpen.add(k);else S.ckOpen.delete(k)},true);
+app.addEventListener("focusout",()=>{if(S.view==="checklist"&&S.ckStale)setTimeout(()=>{if(S.view==="checklist"&&S.ckStale&&!ckFocusIn("#ckList")&&!Object.keys(ckTimers).length){S.ckStale=false;renderChecklist()}},80)});
 app.addEventListener("focusout",()=>{if(S.view==="orcamento"&&S.orcStale)setTimeout(()=>{if(S.view==="orcamento"&&S.orcStale&&!orcBusy()){S.orcStale=false;renderOrcamento()}},80)});
 window.addEventListener("online",()=>{S.online=true;if(S.user)softRender()});
 window.addEventListener("offline",()=>{S.online=false;if(S.user)softRender()});
